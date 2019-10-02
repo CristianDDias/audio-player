@@ -1,0 +1,107 @@
+$space-small: 8px;
+
+.grid-header {
+  grid-area: header;
+  margin-bottom: $space-small;
+}
+
+.grid-list {
+  grid-area: list;
+  overflow: auto;
+}
+
+.grid-controls {
+  grid-area: controls;
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template:
+    'header  ' auto
+    'list    ' 1fr
+    'controls' auto
+    / 1fr;
+}
+
+.grid-item {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: $space-small;
+  padding-left: $space-small;
+  padding-right: $space-small;
+  max-width: 500px;
+  width: 100%;
+}
+
+.toolbar-title {
+  flex-grow: 1;
+}
+
+.list {
+  height: 100%;
+  padding: $space-small;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-selected-audio {
+  padding-bottom: $space-small;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.list-audios {
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.list-divider {
+  margin-bottom: $space-small/2 !important;
+}
+
+.list-progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -12px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: $space-small;
+}
+
+.controls-skip-buttons {
+  width: 225px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls-slider {
+  width: 225px;
+}
+
+.icon-large {
+  height: 76px !important;
+  width: 76px !important;
+}
+
+.icon-medium {
+  height: 48px !important;
+  width: 48px !important;
+}
+
+.icon-small {
+  height: 36px !important;
+  width: 36px !important;
+}
+
+.icon-button-file {
+  display: none;
+}
